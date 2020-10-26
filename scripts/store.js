@@ -33,8 +33,8 @@ const findAndUpdateName = function (id, newName) {
 }
 
 const findAndDelete = function (id) {
-    let deletedArray = this.items.filter(item => item.id != id);
-    return deletedArray;
+    items.find((item) => item.id === id);
+    items.splice(items, 1);
 }
 
   export default {
