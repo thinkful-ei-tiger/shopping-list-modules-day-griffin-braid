@@ -94,19 +94,12 @@ const handleDeleteItemClicked = function () {
 };
 
 /**
- * Toggles the store.hideCheckedItems property
- */
-const toggleCheckedItemsFilter = function () {
-  store.hideCheckedItems = !store.hideCheckedItems;
-};
-
-/**
  * Places an event listener on the checkbox
  * for hiding completed items.
  */
 const handleToggleFilterClick = function () {
   $('.js-filter-checked').click(() => {
-    toggleCheckedItemsFilter();
+    store.toggleCheckedFilter();
     render();
   });
 };
